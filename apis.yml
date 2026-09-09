@@ -1,17 +1,40 @@
 aid: aegfuels
-name: Aegfuels
-description: 'Aegfuels is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AEG Fuels
+description: >-
+  AEG Fuels (Associated Energy Group, LLC) is a Miami, Florida-based global aviation
+  fuel supply, logistics and trip-support company that has served commercial air carriers,
+  business and general aviation operators, FBOs and government aircraft since 1988. It
+  arranges jet fuel uplifts at more than 3,000 locations across 197 countries and layers
+  ancillary services on top of supply: flight support (flight planning, ground handling,
+  overflight and landing permits, on-site supervision, coordination of third-party
+  services), fuel management for airlines, tax recovery and VAT exemption, a Sustainable
+  Aviation Fuel (SAF) program, marine fuel and land fuel, the Carnet fuel card, the AEG
+  Rewards loyalty program, and the AEG Connect network for FBOs and bulk fuel
+  distribution. Customers transact through the company's own MILO ordering platform - a
+  browser client portal at app.aegfuels.com and iOS/Android apps for quoting, ordering,
+  authorizing and reviewing fuel transactions. As of this profile AEG Fuels publishes no
+  public developer program, API reference or machine-readable contract; the digital
+  surface is an end-user product, not a platform.
+image: https://cdn.prod.website-files.com/67a659f9b80c35040b4d08ae/67a659f9b80c35040b4d0c34_662674c090a942af1f6146b7_logo_header.svg
 url: https://raw.githubusercontent.com/api-evangelist/aegfuels/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-09'
 modified: '2026-09-09'
 tags:
 - Company
+- Aviation
+- Aviation Fuel
+- Fuel
+- Energy
+- Logistics
+- Supply Chain
+- Flight Support
+- Sustainable Aviation Fuel
+- Marine Fuel
+- Transportation
+- Business Aviation
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +43,57 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/aegfuels
+  url: https://www.aegfuels.com/
+- type: About
+  url: https://www.aegfuels.com/about-us
+- type: Blog
+  url: https://www.aegfuels.com/news
+- type: Support
+  url: https://www.aegfuels.com/contact-us
+- type: SignUp
+  url: https://www.aegfuels.com/enroll
+- type: Login
+  url: https://app.aegfuels.com/toolbox/Login.aspx
+- type: PrivacyPolicy
+  url: https://www.aegfuels.com/privacy-policy
+- type: TermsOfService
+  url: https://cdn.prod.website-files.com/67a659f9b80c35040b4d08ae/6813f3821e59ec07be1c4e8f_AEG%20General%20Terms%20and%20Conditions%20-%20May%202025.pdf
+- type: Careers
+  url: https://www.aegfuels.com/careers
+- type: DomainSecurity
+  url: security/aegfuels-domain-security.yml
+- type: Packages
+  url: packages/aegfuels-packages.yml
+- type: Plans
+  url: plans/aegfuels-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aegfuels-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aegfuels-llms.txt
+x-enrichment:
+  date: '2026-09-09'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AEG Fuels ships end-user software only - the MILO client portal at app.aegfuels.com and
+    the iOS/Android AEG Fuels Mobile apps for quoting and ordering fuel - and publishes no
+    developer portal, API reference or machine-readable contract on any host, including the
+    subdomains found in certificate transparency (paygateway, uplift, aegis/SAP, ai, dev).
+  evidence:
+    - url: https://www.aegfuels.com/openapi.json
+      status: 404
+    - url: https://www.aegfuels.com/developers
+      status: 404
+    - url: https://app.aegfuels.com/swagger/v1/swagger.json
+      status: 404
+    - url: https://www.aegfuels.com/.well-known/api-catalog
+      status: 404
+    - url: https://paygateway.aegfuels.com/swagger/v1/swagger.json
+      status: 500
+    - url: https://api.github.com/users/aegfuels
+      status: 404
+  checked: '2026-09-09'

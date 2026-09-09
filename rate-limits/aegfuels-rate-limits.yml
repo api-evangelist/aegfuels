@@ -1,0 +1,11 @@
+generated: '2026-09-09'
+method: searched
+source: https://www.aegfuels.com/client-portal
+limit_count: 0
+rate_limits: []
+note: >-
+  No rate limits are documented because no public API is documented. Contract discovery on
+  2026-09-09 found no OpenAPI, Swagger, GraphQL, AsyncAPI or MCP surface on any AEG Fuels
+  host, so there is no runtime limit, response header (X-RateLimit-*, RateLimit-*,
+  Retry-After) or exhaustion status code to record. This is a recorded absence, not an
+  unchecked field.

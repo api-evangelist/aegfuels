@@ -1,0 +1,263 @@
+generated: '2026-09-09'
+method: probed
+source: live GET probes of the named /.well-known/ path list plus /apis.json and /apis.yml on every host
+  in apis.yml and every subdomain found in certificate transparency
+note: No /.well-known/ document is served on any AEG Fuels host. aegfuels.com and www.aegfuels.com are
+  Webflow-hosted and answer every /.well-known/ path with an 88-byte 'Invalid .well-known request' 404
+  page; app.aegfuels.com and portal.aegrewards.com (the ASP.NET MILO client portal and AEG Rewards portal)
+  return the IIS 404; paygateway.aegfuels.com returns a blanket ASP.NET Core 500 ('Could not find file
+  ./wwwroot/index.html') on every path including its root, so nothing is readable there either. A negative-control
+  path that cannot exist was probed on every host and returned the same non-2xx, so none of these hosts
+  echoes paths back as documents. No WellKnown, SecurityTxt or AgentCard pointer is emitted because nothing
+  was served.
+hosts:
+- host: https://aegfuels.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aegfuels-negative-control-mgunc7jc.json
+    status: 404
+    bytes: 88
+- host: https://www.aegfuels.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aegfuels-negative-control-mgunc7jc.json
+    status: 404
+    bytes: 88
+- host: https://app.aegfuels.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aegfuels-negative-control-mgunc7jc.json
+    status: 404
+    bytes: 1245
+- host: https://portal.aegrewards.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aegfuels-negative-control-mgunc7jc.json
+    status: 404
+    bytes: 1245
+- host: https://paygateway.aegfuels.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 500
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 500
+    file: null
+  - path: /.well-known/api-catalog
+    status: 500
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 500
+    file: null
+  - path: /.well-known/ucp.json
+    status: 500
+    file: null
+  - path: /.well-known/acp.json
+    status: 500
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 500
+    file: null
+  - path: /.well-known/apis.json
+    status: 500
+    file: null
+  - path: /apis.json
+    status: 500
+    file: null
+  - path: /apis.yml
+    status: 500
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 500
+    file: null
+  - path: /.well-known/agent.json
+    status: 500
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/aegfuels-negative-control-mgunc7jc.json
+    status: 500
+    bytes: 43

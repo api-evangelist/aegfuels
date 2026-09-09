@@ -1,0 +1,17 @@
+generated: '2026-09-09'
+method: searched
+source: >-
+  npm registry search, PyPI, GitHub org + repository search, and the aegfuels.com site
+  (/client-portal, /mobile-app, /connect) - searched 2026-09-09
+package_count: 0
+packages: []
+note: >-
+  No first-party client library exists on any public registry. npm search for "aegfuels"
+  returns 0 objects, https://pypi.org/pypi/aegfuels/json returns 404, the GitHub search
+  api /search/repositories?q=aegfuels returns total_count 0, and https://api.github.com/users/aegfuels
+  returns 404 - AEG Fuels operates no public GitHub organization. The only distributed
+  software the company ships is the end-user AEG Fuels Mobile app (iOS
+  apps.apple.com/us/app/aeg-fuels-mobile/id1483082469, Android
+  play.google.com/store/apps/details?id=com.mmcinc.aeg.mobileapp02, built by the vendor
+  MMC Inc), which is a consumer application rather than a client library and therefore has
+  no registry version to record. No SDKs pointer is emitted.
